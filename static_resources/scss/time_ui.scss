@@ -1,0 +1,43 @@
+// #################### App UI Variables ##################
+$primary-color: #9FD4FF;
+$secondary-color: #A4A4A4;
+$clock-ui-color: #7B7B7B;
+$light-gray: #F1F1F1;
+$copywrite-color: #CBCBCB; 
+
+$box-shadow-normal: 0px 3px 6px rgba(0, 0, 0, .16);
+$box-shadow-clock: 0px 8px 3px rgba(0, 0, 0, .13);
+
+$transition-standard: all 0.33s ease-in-out;
+
+
+// #################### App UI Fonts ##################
+@font-face {
+    src: url('../fonts/product-sans/product_sans.woff2');
+    font-family: 'product-sans';
+    font-style: normal;
+}
+
+@font-face {
+    src: url('../fonts/digital-dismay/digital_dismay-webfont.woff2');
+    font-family: 'digital-dismay';
+    font-style: normal;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'product-sans';
+    letter-spacing: 0.2vw;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+}
+
+
+// #################### App Header UI settings ##################
+
+
+
+// #################### App Drum Area UI settings ##################

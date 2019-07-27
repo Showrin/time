@@ -1,0 +1,18 @@
+@font-face {
+  src: url("../fonts/product-sans/product_sans.woff2");
+  font-family: 'product-sans';
+  font-style: normal; }
+
+@font-face {
+  src: url("../fonts/digital-dismay/digital_dismay-webfont.woff2");
+  font-family: 'digital-dismay';
+  font-style: normal; }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'product-sans';
+  letter-spacing: 0.2vw; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px; }
