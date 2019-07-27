@@ -37,7 +37,87 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 // #################### App Header UI settings ##################
+.time-header {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: stretch;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.time-header__page-mark {
+    width: 4vw;
+    height: inherit;
+    background-color: $primary-color;
+}
+
+.time-brand-icon {
+    width: 10vw;
+    height: auto;
+    margin-left: 2vw;
+}
+
+.time-header__search {
+    position: relative;
+    margin-left: auto;
+    margin-right: 4vw;
+    display: flex;
+    align-items: stretch;
+    width: 35vw;
+}
+
+.time-header__search-field {
+    width: 100%;
+    padding-right: 4vw;
+    padding-left: 1vw;
+    border: none;
+    border-bottom: 2px solid $secondary-color;
+}
+.time-header__search-field:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.time-header__search-icon {
+    align-self: center;
+    width: 1.5vw;
+    height: auto;
+    position: absolute;
+    right: 0;
+}
 
 
+// #################### App Main Body UI settings ##################
+.time-body{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
 
-// #################### App Drum Area UI settings ##################
+
+// #################### App Clock UI settings ##################
+.time-body__clock {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    border: 6px solid $clock-ui-color;
+    box-sizing: border-box;
+    margin-right: 8vw;
+    background: url('../images/icons/globe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+// #################### App Clock Details UI settings ##################
+.time-body__details {
+    width: 30vw;
+    height: auto;
+    background-color: #fff;
+}
