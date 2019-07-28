@@ -12,7 +12,11 @@ html, body {
   margin: 0px;
   padding: 0px;
   font-family: 'product-sans';
-  letter-spacing: 0.2vw; }
+  letter-spacing: 0.2vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0px; }
@@ -171,6 +175,36 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: red; }
 
 .time-body__details {
-  width: 30vw;
+  width: auto;
+  min-width: 30vw;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #fff; }
+
+.time-body__details-title {
+  color: #A4A4A4;
+  font-weight: 100;
+  margin-bottom: 2vh;
+  font-size: 1.8vw; }
+
+.time-body__details-time {
+  color: #9FD4FF;
+  font-family: 'digital-dismay';
+  font-size: 6.5vw;
+  letter-spacing: .4vw;
+  margin-bottom: 10vh; }
+
+.time-body__details-timezone {
+  color: #A4A4A4;
+  font-weight: bold;
+  font-size: 2.2vw;
+  letter-spacing: .4vw; }

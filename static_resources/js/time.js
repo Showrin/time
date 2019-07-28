@@ -2,6 +2,9 @@
 var clockHandSecond = document.querySelector('#js-second');
 var clockHandMinute = document.querySelector('#js-minute');
 var clockHandHour = document.querySelector('#js-hour');
+var digitalTime = document.querySelector('#js-digital-time');
+
+
 
 // ########### Geting access to the System date ################
 var date = new Date();
@@ -9,10 +12,13 @@ var second = date.getSeconds();
 var minute = date.getMinutes();
 var hour = date.getHours();
 
+
+
 // ########### Setting the initial points of the clock's hand ################
 clockHandSecond.style.transform = `rotate(${((second/60) * 360) + 90}deg)`;
 clockHandMinute.style.transform = `rotate(${((minute/60) * 360) + 90}deg)`;
 clockHandHour.style.transform = `rotate(${((hour / 12) * 360) + (minute * (360 / (12*60))) + 90}deg)`;
+
 
 
 // ########### Declaring movement control functions ################
@@ -65,7 +71,49 @@ function clockHourMove() {
 }
 
 
+// ########### App Digital Clock functions ################
+function digitalSecondSet() {
+    let date = new Date();
+    let second = date.getSeconds();
+
+    return numberFormater(second);
+}
+
+function digitalMinuteSet() {
+    let date = new Date();
+    let minute = date.getMinutes();
+
+    return numberFormater(minute);
+}
+
+function digitalHourSet() {
+    let date = new Date();
+    let hour = date.getHours();
+
+    return numberFormater(hour);
+}
+
+function digitalTimeSet() {
+    let time = `${digitalHourSet()}:${digitalMinuteSet()}:${digitalSecondSet()}`;
+    digitalTime.innerHTML = time;
+}
+
+
+// ########### Utility functions ################
+function numberFormater(number) {
+    if (number >= 0 && number <= 9) {
+        return '0' + number;
+    } else {
+        return number;
+    }
+}
+
+
+
+
 // ########### Calling the functions ################
 setInterval(clockSecondMove, 1000);
 setInterval(clockMinuteMove, 1000);
 setInterval(clockHourMove, 1000);
+
+setInterval(digitalTimeSet, 1000);
