@@ -1,9 +1,12 @@
 // ########### Geting access to the dom elements ################
-var clockHandSecond = document.querySelector('#js-second');
-var clockHandMinute = document.querySelector('#js-minute');
-var clockHandHour = document.querySelector('#js-hour');
-var digitalTime = document.querySelector('#js-digital-time');
-var dateShower = document.querySelector('#js-date');
+const clockHandSecond = document.querySelector('#js-second');
+const clockHandMinute = document.querySelector('#js-minute');
+const clockHandHour = document.querySelector('#js-hour');
+const digitalTime = document.querySelector('#js-digital-time');
+const dateShower = document.querySelector('#js-date');
+const mobileSearchBtn = document.querySelector('#js-mobile-search-btn');
+const sidenavCloseBtn = document.querySelector('#js-back-btn');
+const sidenav = document.querySelector('#js-mobile-sidenav');
 
 
 
@@ -19,6 +22,17 @@ var hour = date.getHours();
 clockHandSecond.style.transform = `rotate(${((second/60) * 360) + 90}deg)`;
 clockHandMinute.style.transform = `rotate(${((minute/60) * 360) + 90}deg)`;
 clockHandHour.style.transform = `rotate(${((hour / 12) * 360) + (minute * (360 / (12*60))) + 90}deg)`;
+
+
+
+// ########### Controling sidenav ################
+mobileSearchBtn.addEventListener('click', function() {
+    sidenav.style.left = 0;
+});
+
+sidenavCloseBtn.addEventListener('click', function() {
+    sidenav.style.left = "100%";
+});
 
 
 

@@ -4,6 +4,7 @@ $secondary-color: #A4A4A4;
 $clock-ui-color-hand: #252525;
 $clock-ui-color: #7B7B7B;
 $light-gray: #F1F1F1;
+$sidenav-horizontal-line-color: #E4E4E4;
 $copywrite-color: #CBCBCB; 
 
 $box-shadow-normal: 0px 3px 6px rgba(0, 0, 0, .16);
@@ -47,18 +48,33 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: row;
     align-items: stretch;
     margin-top: 4vh;
+    
+    @media only screen and (max-width: 600px)  {
+        margin-top: 0;
+        height: 10vh;
+        box-shadow: $box-shadow-normal;
+    }
 }
 
 .time-header__page-mark {
     width: 4vw;
     height: inherit;
     background-color: $primary-color;
+    
+    @media only screen and (max-width: 600px)  {
+        display: none;
+    }
 }
 
 .time-brand-icon {
     width: 10vw;
     height: auto;
     margin-left: 2vw;
+    
+    @media only screen and (max-width: 600px)  {
+        width: 25vw;
+        margin-left: 5vw;
+    }
 }
 
 .time-header__search {
@@ -68,6 +84,10 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     align-items: stretch;
     width: 35vw;
+    
+    @media only screen and (max-width: 600px)  {
+        margin-right: 0;
+    }
 }
 
 .time-header__search-field {
@@ -78,6 +98,10 @@ h1, h2, h3, h4, h5, h6, p {
     border-bottom: 2px solid $secondary-color;
     color: $secondary-color;
     font-size: 1.5rem;
+    
+    @media only screen and (max-width: 600px)  {
+        display: none;
+    }
 }
 .time-header__search-field:focus {
     box-shadow: none;
@@ -85,11 +109,96 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .time-header__search-icon {
+    display: block;
     align-self: center;
     width: 1.5vw;
     height: auto;
     position: absolute;
     right: 0;
+    
+    @media only screen and (max-width: 600px)  {
+        display: none;
+        width: 7vw;
+        margin-right: 5vw;
+    }
+}
+
+.time-header__mobile-search-icon {
+    display: none;
+    align-self: center;
+    height: auto;
+    position: absolute;
+    right: 0;
+
+    @media only screen and (max-width: 600px)  {
+        display: block;
+        width: 7vw;
+        margin-right: 5vw;
+    }
+
+}
+
+
+// #################### App Mobile Sidenav UI settings ##################
+.time-sidenav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 100%;
+    background-color: #fff;
+    z-index: 1;
+    transition: $transition-standard;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.time-sidenav__header {
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.time-side-nav__search-field {
+    width: 74%;
+    height: 5vh;
+    border: none;
+    border-radius: 3px;
+    background-color: $light-gray;
+    padding: 0 3vw 0 3vw;
+    color: $secondary-color;
+}
+.time-side-nav__search-field:focus {
+    outline: none;
+}
+
+.time-side-nav__back-btn {
+    width: 6%;
+    height: auto;
+    margin-right: 4%;
+}
+
+.time-side-nav__search-result {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-side-nav__search-result__part {
+    width: 90%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $sidenav-horizontal-line-color;
+    color: $secondary-color;
+    margin-bottom: 1vh;
 }
 
 
@@ -102,6 +211,12 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: center;
     align-items: stretch;
     margin-top: 10vh;
+    
+    @media only screen and (max-width: 600px)  {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8vh;
+    }
 }
 
 
@@ -118,6 +233,13 @@ h1, h2, h3, h4, h5, h6, p {
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+    
+    @media only screen and (max-width: 600px)  {
+        width: 70vw;
+        height: 70vw;
+        margin-right: 0;
+        margin-bottom: 6vh;
+    }
 }
 
 .time-clock__center {
@@ -182,6 +304,10 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
+    
+    @media only screen and (max-width: 600px)  {
+        align-items: center;
+    }
 }
 
 .time-body__details-title {
@@ -189,6 +315,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 100;
     margin-bottom: 2vh; 
     font-size: 1.8vw;
+    
+    @media only screen and (max-width: 600px)  {
+        font-size: 6vw;
+    }
 }
 
 .time-body__details-time {
@@ -197,13 +327,22 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 6.5vw;
     letter-spacing: .4vw;
     margin-bottom: 10vh; 
+    
+    @media only screen and (max-width: 600px)  {
+        font-size: 18vw;
+        margin-bottom: 5vh;
+    }
 }
 
 .time-body__details-timezone {
     color: $secondary-color;
     font-weight: bold;
     font-size: 2.2vw;
-    letter-spacing: .4vw;
+    letter-spacing: .4vw; 
+    
+    @media only screen and (max-width: 600px)  {
+        font-size: 7vw;
+    }
 }
 
 
@@ -214,5 +353,13 @@ h1, h2, h3, h4, h5, h6, p {
     right: 10px;
     font-size: 1vw;
     letter-spacing: .1vw;
-    color: $copywrite-color;
+    color: $copywrite-color; 
+    display: block;
+    width: 100%;
+    text-align: center;
+    
+    @media only screen and (max-width: 600px)  {
+        right: unset;
+        font-size: 3vw;
+    }
 }

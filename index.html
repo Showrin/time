@@ -60,8 +60,25 @@
             <input type="text" id="js-search-field" class="time-header__search-field">
 
             <svg class="time-header__search-icon" xmlns="http://www.w3.org/2000/svg" width="38.027" height="38.027" viewBox="0 0 38.027 38.027"><path d="M37.8,35.555,26.749,24.508a15.083,15.083,0,1,0-2.24,2.241L35.555,37.8a.792.792,0,0,0,1.12,0l1.12-1.12A.792.792,0,0,0,37.8,35.555ZM15.053,26.936A11.884,11.884,0,1,1,26.936,15.053,11.9,11.9,0,0,1,15.053,26.936Z" transform="translate(0 0)" fill="#a4a4a4"/></svg>
+
+            <svg id="js-mobile-search-btn" class="time-header__mobile-search-icon" xmlns="http://www.w3.org/2000/svg" width="38.027" height="38.027" viewBox="0 0 38.027 38.027"><path d="M37.8,35.555,26.749,24.508a15.083,15.083,0,1,0-2.24,2.241L35.555,37.8a.792.792,0,0,0,1.12,0l1.12-1.12A.792.792,0,0,0,37.8,35.555ZM15.053,26.936A11.884,11.884,0,1,1,26.936,15.053,11.9,11.9,0,0,1,15.053,26.936Z" transform="translate(0 0)" fill="#a4a4a4"/></svg>
         </div>
     </header>
+
+    <div id="js-mobile-sidenav" class="time-sidenav">
+        <div class="time-sidenav__header">
+            <svg id="js-back-btn" class="time-side-nav__back-btn" xmlns="http://www.w3.org/2000/svg" width="19.093" height="14.148" viewBox="0 0 19.093 14.148"><g transform="translate(19.093 14.148) rotate(180)"><path d="M0,7.075a.765.765,0,0,0,.763.763H16.32l-5.572,4.974a.763.763,0,0,0,.509,1.336.792.792,0,0,0,.509-.191l7.073-6.309a.752.752,0,0,0,.254-.572.772.772,0,0,0-.254-.572L11.766.194a.766.766,0,1,0-1.018,1.145L16.32,6.312H.763A.765.765,0,0,0,0,7.075Z" fill="#a4a4a4"/></g></svg>
+
+            <input id="js-sidenav-search-field" class="time-side-nav__search-field" type="text">
+        </div>
+
+        <div id="js-sidenav-search-result" class="time-side-nav__search-result">
+            <div class="time-side-nav__search-result__part">Asia, Dhaka</div>
+            <div class="time-side-nav__search-result__part">Asia, Dhaka</div>
+            <div class="time-side-nav__search-result__part">Asia, Dhaka</div>
+            <div class="time-side-nav__search-result__part">Asia, Dhaka</div>
+        </div>
+    </div>
 
     <main class="time-body">
         <div class="time-body__clock">
@@ -89,9 +106,9 @@
 
 <script>
     
-        setTimeout(function() {
-            document.querySelector('.time-splash-screen').style.display = "none";
-        }, 4000)
+    setTimeout(function() {
+        document.querySelector('.time-splash-screen').style.display = "none";
+    }, 4000)
     
 </script>
 
