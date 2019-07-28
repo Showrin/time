@@ -1,6 +1,7 @@
 // #################### App UI Variables ##################
 $primary-color: #9FD4FF;
 $secondary-color: #A4A4A4;
+$clock-ui-color-hand: #252525;
 $clock-ui-color: #7B7B7B;
 $light-gray: #F1F1F1;
 $copywrite-color: #CBCBCB; 
@@ -44,8 +45,7 @@ h1, h2, h3, h4, h5, h6, p {
     height: auto;
     flex-direction: row;
     align-items: stretch;
-    margin-top: 25px;
-    margin-bottom: 40px;
+    margin-top: 4vh;
 }
 
 .time-header__page-mark {
@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    margin-top: 10vh;
 }
 
 
@@ -122,7 +123,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 1.8vw;
     height: 1.8vw;
     border-radius: 50%;
-    background-color: $clock-ui-color;
+    background-color: $clock-ui-color-hand;
     position: absolute;
     transform-origin: center center;
     top: 50%;
@@ -133,7 +134,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .time-clock__hand {
     border-radius: 50vw;
-    background-color: $clock-ui-color;
+    background-color: $clock-ui-color-hand;
     position: absolute;
     transform-origin: 100%;
     box-shadow: $box-shadow-clock;
@@ -167,6 +168,7 @@ h1, h2, h3, h4, h5, h6, p {
     left: calc(50% - #{$second-width});
     top: calc(50% - #{$second-height/2});
     transition: $clock-hand-transition; 
+    background-color: red;
 }
 
 

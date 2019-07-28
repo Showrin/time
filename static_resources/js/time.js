@@ -12,7 +12,7 @@ var hour = date.getHours();
 // ########### Setting the initial points of the clock's hand ################
 clockHandSecond.style.transform = `rotate(${((second/60) * 360) + 90}deg)`;
 clockHandMinute.style.transform = `rotate(${((minute/60) * 360) + 90}deg)`;
-clockHandMinute.style.transform = `rotate(${((hour/60) * 360) + 90}deg)`;
+clockHandHour.style.transform = `rotate(${((hour / 12) * 360) + (minute * (360 / (12*60))) + 90}deg)`;
 
 
 // ########### Declaring movement control functions ################
@@ -56,8 +56,12 @@ function clockHourMove() {
         fullAngleCountForHour += 360;
     }
 
-    var angleForHour = (minute * (360 / (12*60))) + fullAngleCountForHour + 90;
+    var angleForHour = ((hour / 12) * 360) + (minute * (360 / (12*60))) + fullAngleCountForHour + 90;
     clockHandHour.style.transform = `rotate(${angleForHour}deg)`; //hour hand changes per hour
+
+    // console.log(hour);
+    // console.log(minute);
+    // console.log(angleForHour);
 }
 
 

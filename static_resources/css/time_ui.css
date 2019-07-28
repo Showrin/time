@@ -30,8 +30,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  margin-top: 25px;
-  margin-bottom: 40px; }
+  margin-top: 4vh; }
 
 .time-header__page-mark {
   width: 4vw;
@@ -93,7 +92,8 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  margin-top: 10vh; }
 
 .time-body__clock {
   width: 30vw;
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 1.8vw;
   height: 1.8vw;
   border-radius: 50%;
-  background-color: #7B7B7B;
+  background-color: #252525;
   position: absolute;
   -webkit-transform-origin: center center;
   -ms-transform-origin: center center;
@@ -128,7 +128,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .time-clock__hand {
   border-radius: 50vw;
-  background-color: #7B7B7B;
+  background-color: #252525;
   position: absolute;
   -webkit-transform-origin: 100%;
   -ms-transform-origin: 100%;
@@ -167,7 +167,8 @@ h1, h2, h3, h4, h5, h6, p {
   transition: -webkit-transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54);
   -o-transition: transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54);
   transition: transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54);
-  transition: transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54), -webkit-transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54); }
+  transition: transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54), -webkit-transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54);
+  background-color: red; }
 
 .time-body__details {
   width: 30vw;
