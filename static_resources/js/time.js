@@ -27,11 +27,17 @@ clockHandHour.style.transform = `rotate(${((hour / 12) * 360) + (minute * (360 /
 
 // ########### Controling sidenav ################
 mobileSearchBtn.addEventListener('click', function() {
-    sidenav.style.left = 0;
+    sidenav.style.display = "flex";
+    setTimeout(function() {
+        sidenav.style.left = 0;
+    }, 30);
 });
 
 sidenavCloseBtn.addEventListener('click', function() {
     sidenav.style.left = "100%";
+    setTimeout(function() {
+        sidenav.style.display = "none";
+    }, 300);
 });
 
 

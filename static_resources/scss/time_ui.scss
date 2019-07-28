@@ -141,6 +141,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 // #################### App Mobile Sidenav UI settings ##################
 .time-sidenav {
+    display: none;
     position: absolute;
     width: 100%;
     top: 0;
@@ -150,9 +151,12 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #fff;
     z-index: 1;
     transition: $transition-standard;
-    display: flex;
     flex-direction: column;
     align-items: stretch;
+
+    @media only screen and (max-width: 600px)  {
+        display: none;
+    }
 }
 
 .time-sidenav__header {
@@ -355,10 +359,10 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: .1vw;
     color: $copywrite-color; 
     display: block;
-    width: 100%;
-    text-align: center;
     
     @media only screen and (max-width: 600px)  {
+        width: 100%;
+        text-align: center;
         right: unset;
         font-size: 3vw;
     }
