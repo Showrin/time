@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6, p {
 // #################### App Mobile Sidenav UI settings ##################
 .time-sidenav {
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     bottom: 0;
@@ -164,17 +164,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .time-sidenav__header {
-    height: 12vh;
+    height: 20vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2vh;
+    margin-bottom: 5vw;
 }
 
 .time-side-nav__search-field {
     width: 74%;
-    height: 5vh;
+    height: 10vw;
     border: none;
     border-radius: 3px;
     background-color: $light-gray;
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .time-side-nav__search-result {
-    height: 40vh;
+    min-height: 80vw;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -201,12 +201,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .time-side-nav__search-result__part {
     width: 90%;
-    height: 7vh;
+    height: 14vw;
     display: flex;
     align-items: center;
     border-bottom: 1px solid $sidenav-horizontal-line-color;
     color: $secondary-color;
-    margin-bottom: 1vh;
+    margin-bottom: 2vw;
 }
 
 
@@ -365,11 +365,11 @@ h1, h2, h3, h4, h5, h6, p {
     display: block;
     
     @media only screen and (max-width: 600px)  {
+        position: static;
         width: 100%;
         text-align: center;
-        right: unset;
-        bottom: unset;
-        top: 96.5vh;
+        margin-top: 8vw;
+        margin-bottom: 5vw;
         font-size: 3vw;
     }
 }
