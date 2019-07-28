@@ -3,6 +3,7 @@ var clockHandSecond = document.querySelector('#js-second');
 var clockHandMinute = document.querySelector('#js-minute');
 var clockHandHour = document.querySelector('#js-hour');
 var digitalTime = document.querySelector('#js-digital-time');
+var dateShower = document.querySelector('#js-date');
 
 
 
@@ -64,10 +65,6 @@ function clockHourMove() {
 
     var angleForHour = ((hour / 12) * 360) + (minute * (360 / (12*60))) + fullAngleCountForHour + 90;
     clockHandHour.style.transform = `rotate(${angleForHour}deg)`; //hour hand changes per hour
-
-    // console.log(hour);
-    // console.log(minute);
-    // console.log(angleForHour);
 }
 
 
@@ -99,6 +96,15 @@ function digitalTimeSet() {
 }
 
 
+
+// ########### App Date Setter functions ################
+function dateSetter(date) {
+    let parts = date.toString().split(' ');
+    dateShower.innerHTML = `${parts[2]} ${parts[1]}, ${parts[3]}`;
+}
+
+
+
 // ########### Utility functions ################
 function numberFormater(number) {
     if (number >= 0 && number <= 9) {
@@ -117,3 +123,5 @@ setInterval(clockMinuteMove, 1000);
 setInterval(clockHourMove, 1000);
 
 setInterval(digitalTimeSet, 1000);
+
+dateSetter(date);

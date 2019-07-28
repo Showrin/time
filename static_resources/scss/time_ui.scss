@@ -205,3 +205,14 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 2.2vw;
     letter-spacing: .4vw;
 }
+
+
+// #################### App Copywrite UI settings ##################
+.time__copywrite-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1vw;
+    letter-spacing: .1vw;
+    color: $copywrite-color;
+}
