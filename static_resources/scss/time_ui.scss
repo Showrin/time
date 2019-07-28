@@ -6,9 +6,10 @@ $light-gray: #F1F1F1;
 $copywrite-color: #CBCBCB; 
 
 $box-shadow-normal: 0px 3px 6px rgba(0, 0, 0, .16);
-$box-shadow-clock: 0px 8px 3px rgba(0, 0, 0, .13);
+$box-shadow-clock: 0px 4px 3px rgba(0, 0, 0, .13);
 
 $transition-standard: all 0.33s ease-in-out;
+$clock-hand-transition: transform 0.33s cubic-bezier(0, 0.72, 0.39, 1.54);
 
 
 // #################### App UI Fonts ##################
@@ -74,6 +75,8 @@ h1, h2, h3, h4, h5, h6, p {
     padding-left: 1vw;
     border: none;
     border-bottom: 2px solid $secondary-color;
+    color: $secondary-color;
+    font-size: 1.5rem;
 }
 .time-header__search-field:focus {
     box-shadow: none;
@@ -108,10 +111,62 @@ h1, h2, h3, h4, h5, h6, p {
     border: 6px solid $clock-ui-color;
     box-sizing: border-box;
     margin-right: 8vw;
-    background: url('../images/icons/globe.png');
+    background: url('../images/icons/Group\ 61.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
+}
+
+.time-clock__center {
+    width: 1.8vw;
+    height: 1.8vw;
+    border-radius: 50%;
+    background-color: $clock-ui-color;
+    position: absolute;
+    transform-origin: center center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: $box-shadow-clock;
+}
+
+.time-clock__hand {
+    border-radius: 50vw;
+    background-color: $clock-ui-color;
+    position: absolute;
+    transform-origin: 100%;
+    box-shadow: $box-shadow-clock;
+}
+
+.time-clock__hand--hour {
+    $hour-width: 25%;
+    $hour-height: 1vw;
+    width: $hour-width;
+    height: $hour-height;
+    left: calc(50% - #{$hour-width});
+    top: calc(50% - #{$hour-height/2});
+    transition: $clock-hand-transition; 
+}
+
+.time-clock__hand--minute {
+    $minute-width: 32%;
+    $minute-height: .75vw;
+    width: $minute-width;
+    height: $minute-height;
+    left: calc(50% - #{$minute-width});
+    top: calc(50% - #{$minute-height/2});
+    transition: $clock-hand-transition; 
+}
+
+.time-clock__hand--second {
+    $second-width: 37%;
+    $second-height: .4vw;
+    width: $second-width;
+    height: $second-height;
+    left: calc(50% - #{$second-width});
+    top: calc(50% - #{$second-height/2});
+    transition: $clock-hand-transition; 
 }
 
 
